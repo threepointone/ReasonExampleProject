@@ -1,0 +1,27 @@
+{
+  "name": "ReasonExampleProject",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Example project using Reason syntax",
+  "license": "BSD",
+  "dependencies": {
+    "CommonML": "git://github.com/jordwalke/CommonML.git"
+  },
+  "scripts": {
+    "build": "node ./node_modules/CommonML/build.js",
+    "start": "./_build_byte/ReasonExampleProject/reasonExampleProject.out"
+  },
+  "CommonML": {
+    "exports": ["MyProjectMod"],
+    "extensions": [{
+      "interface": ".rei",
+      "implementation": ".re"
+    }],
+    "preprocessor": "refmt",
+    "compileFlags": ["-w","-30","-w","-40", "-bin-annot"],
+    "linkFlags": [],
+    "jsPlaceBuildArtifactsIn": "webAppRoot",
+    "docFlags": [
+    ]
+  }
+}
