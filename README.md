@@ -12,7 +12,7 @@ Example Reason project.
 ### Build
 
     npm install
-    node node_modules/CommonML/build.js
+    npm run build
 
 ### Run
 
